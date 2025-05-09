@@ -17,6 +17,8 @@ import {
   SiExpress,
   SiJira ,
 } from "react-icons/si";
+import frogImage from '/assets/frog.jpg';
+import photo from '/assets/photography.jpg';
 
 
 const languageSkills = [
@@ -172,18 +174,18 @@ export const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Hobby 1 */}
               <div className="flex flex-col items-center">
-                <img
-                  src="./src/assets/frog.jpg"
-                  alt="Drawing and Art"
-                  className="w-full h-64 object-cover rounded-xl shadow-md"
-                />
+               <img
+                src={frogImage}
+                alt="Drawing and Art"
+                className="w-full h-64 object-cover rounded-xl shadow-md"
+              />
                 <p className="mt-4 text-lg text-gray-700 text-center">Drawing and Art</p>
               </div>
 
               {/* Hobby 2 */}
               <div className="flex flex-col items-center">
                 <img
-                  src="./src/assets/photography.jpg"
+                  src={photo}
                   alt="Photography"
                   className="w-full h-64 object-cover rounded-xl shadow-md"
                 />
