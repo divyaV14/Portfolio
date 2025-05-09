@@ -12,9 +12,7 @@ export const Home = () => {
               Hi, I'm Divya Verma
             </h1>
             <p className="text-gray-500 text-base sm:text-lg mb-7 max-w-lg mx-auto md:mx-0">
-              I’m a full-stack developer who loves crafting clean, scalable web
-              applications. My goal is to build solutions that offer both
-              exceptional performance and a delightful user experience.
+            I'm a full-stack developer who loves building user-friendly apps with clean, efficient code. I’m all about solving problems and creating smooth experiences!
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a

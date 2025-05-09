@@ -14,10 +14,11 @@ export const Projects = () => {
       shortDescription:
         "Interactive map-based dashboard that displays live vehicle movements and delivery status in real-time.",
       fullDescription:
-        "This dashboard integrates live vehicle data using WebSockets and displays real-time tracking on Google Maps. It supports role-based access, allows creation of new deliveries, and includes visual tracking indicators and dynamic updates for delivery states.",
-      tech: ["React", "TypeScript", "Socket.IO", "Google Maps API", "Node.js", "Express.js"],
+        "This system is a real-time vehicle tracking and delivery management platform developed using React.js, TypeScript, Node.js, and Google Maps API. It integrates live GPS data via WebSockets to display dynamic vehicle positions on an interactive map with smooth animations and status indicators. The frontend features a modular component structure with role-based access control (admin, manager, delivery agent), and includes route overlays, ETA calculations, delivery progress states, and event-driven UI updates. The backend uses Express.js to expose RESTful APIs for delivery lifecycle management and secure authentication via JWT. Delivery data is persisted in a structured database (SQL), with optimized queries for real-time performance. The system includes geofencing logic to trigger alerts when vehicles enter or exit predefined zones, and visual indicators for delays, idle time, or delivery completion. It supports live delivery creation, status updates, and activity logs. Admins can monitor overall delivery performance with real-time dashboards, and the system is built with scalability in mind to handle high-frequency location updates efficiently.",
+      tech: ["React.js", "TypeScript", "Socket.IO", "Google Maps API", "Node.js", "Express", "SQL", "JWT"],
       link: "#",
     },
+    
     {
       title: "Data Visualization & Reports",
       shortDescription:
@@ -28,12 +29,15 @@ export const Projects = () => {
       link: "https://github.com/Sustainability-pro/brsr_tool",
     },
     {
-      title: "Admin Dashboard",
+      title: "OpsVision – Operations Management Platform",
       shortDescription:
-        "Role-based dashboard to manage users, track device status, and access delivery analytics with filtering and pagination.",
-      tech: ["Next.js", "Redux", "TailwindCSS", "REST API", "MongoDB"],
+        "A full-stack operations dashboard to manage workflows, monitor KPIs, and automate reporting across teams in real-time.",
+      fullDescription:
+        "OpsVision is a scalable operations management system built using React.js and Material UI on the frontend, with a Node.js and Express backend, and a structured SQL (PostgreSQL/MySQL) database. It enables team leads and operations managers to oversee daily workflows, assign tasks, and track live progress through interactive tables, status indicators, and charts. The platform includes authentication, role-based authorization (JWT), and a robust audit trail for all data changes. Key features include dynamic filtering, server-side pagination, scheduled data backups, and automated report generation in PDF/CSV formats. A modular notification system alerts users about pending tasks or anomalies based on business rules. Complex SQL queries and stored procedures are used for high-performance analytics and reporting.The UI emphasizes usability with collapsible side navigation, theme toggles, and responsive design optimized for desktops and tablets.",
+      tech: ["React.js", "Material UI", "Node.js", "Express", "SQL", "JWT", "Chart.js", "PDFKit"],
       link: "#",
     },
+    
     {
       title: "Basic 2048 game",
       shortDescription:
@@ -97,6 +101,7 @@ export const Projects = () => {
                     ))}
                   </div>
 
+                  {project.link && project.link !== "#" && (
                   <div className="flex justify-between items-center relative z-10">
                     <a
                       href={project.link}
@@ -107,6 +112,8 @@ export const Projects = () => {
                       View Project →
                     </a>
                   </div>
+                )}
+
                 </div>
               );
             })}
